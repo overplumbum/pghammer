@@ -4,7 +4,7 @@ Computes the hamming distance for 2 64bit unsigned integers.
 
 == Requirements
 
-* PostgreSQL Server development libraries. (debian: postgresql-server-dev-9.0 e.g.)
+* PostgreSQL Server development libraries. (debian: postgresql-server-dev-9.3 e.g.)
 * pg_config in PATH.
 * GNU C compiler.
 * GNU make.
@@ -15,7 +15,8 @@ PSQL_DB=<database name> make install
 
 == Example
 
-    select hamming_distance(4, 3); #=> 3
+    CREATE EXTENSION hamming_distance;
+    SELECT hamming_distance(4, 3); #=> 3
 
 = License
 
